@@ -1,0 +1,300 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package form;
+
+import config.rootdb;
+import javax.swing.JOptionPane;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.sql.ResultSet;
+
+public class frmregA extends javax.swing.JFrame {
+    ResultSet result;
+    rootdb rooting = new rootdb();
+    Date sekarang = new Date();
+    SimpleDateFormat tgl = new SimpleDateFormat("yyyy/MM/dd");
+    String tanggal = String.valueOf(tgl.format(sekarang));
+    String gender;
+    private void clear(){
+        txtnm.setText(null);
+        txtshnm.setText(null);
+        rbtnman.setSelected(false);
+        rbtnwoman.setSelected(false);
+        datebirth.setDate(sekarang);
+        txtplc.setText(null);
+        txtusnm.setText(null);
+        txtpass.setText(null);
+        txtcompass.setText(null);
+        txtmail.setText(null);
+    }
+    
+    public frmregA() {
+        rooting.root();
+        initComponents();
+        datebirth.setDate(sekarang);
+    }
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        body = new javax.swing.JPanel();
+        lbfullnm = new javax.swing.JLabel();
+        lbshnm = new javax.swing.JLabel();
+        lbgender = new javax.swing.JLabel();
+        lbplace = new javax.swing.JLabel();
+        lbchoose = new javax.swing.JLabel();
+        lbusnm = new javax.swing.JLabel();
+        lbpass = new javax.swing.JLabel();
+        lbcompass = new javax.swing.JLabel();
+        lbmail = new javax.swing.JLabel();
+        txtnm = new javax.swing.JTextField();
+        txtshnm = new javax.swing.JTextField();
+        rbtnman = new javax.swing.JRadioButton();
+        rbtnwoman = new javax.swing.JRadioButton();
+        txtplc = new javax.swing.JTextField();
+        datebirth = new com.toedter.calendar.JDateChooser();
+        txtusnm = new javax.swing.JTextField();
+        txtpass = new javax.swing.JTextField();
+        txtcompass = new javax.swing.JTextField();
+        txtmail = new javax.swing.JTextField();
+        btnreg = new javax.swing.JButton();
+        lbicontitle = new javax.swing.JLabel();
+        lbbackground = new javax.swing.JLabel();
+        header = new javax.swing.JPanel();
+        lbtitle = new javax.swing.JLabel();
+        lbext = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbfullnm.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        lbfullnm.setText("Nama Lengkap            :");
+        body.add(lbfullnm, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 100, -1, -1));
+
+        lbshnm.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        lbshnm.setText("Panggilan                    :");
+        body.add(lbshnm, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 141, 160, -1));
+
+        lbgender.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        lbgender.setText("Jenis Kelamin             :");
+        body.add(lbgender, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 180, -1, -1));
+
+        lbplace.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        lbplace.setText("Tempat Lahir              :");
+        body.add(lbplace, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 221, 160, -1));
+
+        lbchoose.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        lbchoose.setText("Tanggal Lahir             :");
+        body.add(lbchoose, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 261, 160, -1));
+
+        lbusnm.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        lbusnm.setText("Username                   :");
+        body.add(lbusnm, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 302, 160, -1));
+
+        lbpass.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        lbpass.setText("Password                    :");
+        body.add(lbpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 343, 160, -1));
+
+        lbcompass.setFont(new java.awt.Font("Sitka Text", 1, 13)); // NOI18N
+        lbcompass.setText("Konfirmasi Password   :");
+        body.add(lbcompass, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 384, 170, -1));
+
+        lbmail.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        lbmail.setText("Email                          :");
+        body.add(lbmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 425, 154, -1));
+
+        txtnm.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        body.add(txtnm, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 95, 220, -1));
+
+        txtshnm.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        body.add(txtshnm, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 136, 130, -1));
+
+        rbtnman.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        rbtnman.setText("Pria");
+        rbtnman.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnmanActionPerformed(evt);
+            }
+        });
+        body.add(rbtnman, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 176, -1, -1));
+
+        rbtnwoman.setFont(new java.awt.Font("Sitka Text", 1, 14)); // NOI18N
+        rbtnwoman.setText("Wanita");
+        rbtnwoman.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnwomanActionPerformed(evt);
+            }
+        });
+        body.add(rbtnwoman, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 176, -1, -1));
+
+        txtplc.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        body.add(txtplc, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 216, 150, -1));
+
+        datebirth.setDateFormatString("dd/MM/yyyy");
+        body.add(datebirth, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 257, 130, -1));
+        body.add(txtusnm, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 297, 130, -1));
+        body.add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 338, 150, -1));
+        body.add(txtcompass, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 379, 150, -1));
+        body.add(txtmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 420, 150, -1));
+
+        btnreg.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        btnreg.setText("REGISTER");
+        btnreg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnregActionPerformed(evt);
+            }
+        });
+        body.add(btnreg, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 461, 387, 40));
+
+        lbicontitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconprofil.png"))); // NOI18N
+        body.add(lbicontitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 15, -1, 62));
+
+        lbbackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/backgroundreg.jpg"))); // NOI18N
+        body.add(lbbackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 510));
+
+        getContentPane().add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 400, 510));
+
+        header.setBackground(new java.awt.Color(51, 156, 215));
+        header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbtitle.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        lbtitle.setText("REGISTER");
+        lbtitle.setPreferredSize(new java.awt.Dimension(81, 25));
+        header.add(lbtitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, 30));
+
+        lbext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close.png"))); // NOI18N
+        lbext.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbextMouseClicked(evt);
+            }
+        });
+        header.add(lbext, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
+
+        getContentPane().add(header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, -1));
+
+        pack();
+        setLocationRelativeTo(null);
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void rbtnmanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnmanActionPerformed
+        gender="Pria";
+        rbtnwoman.setSelected(false);
+    }//GEN-LAST:event_rbtnmanActionPerformed
+
+    private void rbtnwomanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnwomanActionPerformed
+        gender="Wanita";
+        rbtnman.setSelected(false);
+    }//GEN-LAST:event_rbtnwomanActionPerformed
+
+    private void btnregActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnregActionPerformed
+        String finalDate = String.valueOf(tgl.format(datebirth.getDate()));
+        if(txtnm.getText().isEmpty()||txtshnm.getText().isEmpty()||!(rbtnman.isSelected()||rbtnwoman.isSelected())||
+           txtplc.getText().isEmpty()||txtusnm.getText().isEmpty()||txtpass.getText().isEmpty()||txtcompass.getText().isEmpty()||
+           txtmail.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "PASTIKAN SELURUH DATA TERISI !", "CAUTION", JOptionPane.WARNING_MESSAGE);
+        }else if(tanggal.equals(finalDate)){
+            JOptionPane.showMessageDialog(this, "PASTIKAN TANGGAL YANG BERBEDA !", "CAUTION", JOptionPane.WARNING_MESSAGE);
+        }else if(!(txtcompass.getText().equals(txtpass.getText()))){
+            JOptionPane.showMessageDialog(this, "KONFIRMASI PASSWORD HARUS SAMA !","CAUTION",JOptionPane.WARNING_MESSAGE);
+        }else{
+            try{
+                result = rooting.adapter.executeQuery("SELECT * FROM person WHERE id ='"+txtusnm.getText()+"'");
+                if(result.next()){
+                    if(txtusnm.getText().equals(result.getString("id"))){
+                        JOptionPane.showMessageDialog(this, "USERNAME SUDAH ADA !","INFO",JOptionPane.INFORMATION_MESSAGE);
+                    }
+                }else{
+                    int question = JOptionPane.showConfirmDialog(this, "APAKAH ANDA INGIN MENDAFTAR ?", "QUESTION", JOptionPane.YES_NO_OPTION);
+                    if(question==JOptionPane.YES_OPTION){
+                        rooting.adapter.executeUpdate("INSERT INTO person VALUES('"+"Karyawan"+"','"+txtnm.getText()+"','"+txtshnm.getText()+"',"
+                            +"'"+gender+"','"+txtplc.getText()+"',"
+                            +"'"+finalDate+"','"+txtusnm.getText()+"',"
+                            +"'"+txtpass.getText()+"','"+txtmail.getText()+"')");
+                        JOptionPane.showMessageDialog(this, "AKUN TERDAFTAR, SILAHKAN LOGIN !!!", "INFO", JOptionPane.INFORMATION_MESSAGE);
+                        clear();
+                    }else{
+                        clear();
+                    }
+                }
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(this,"DATABASE TIDAK TERKONEKSI !!!","ERROR",JOptionPane.ERROR_MESSAGE);
+                e.getMessage();
+                System.exit(0);
+            }
+        }
+    }//GEN-LAST:event_btnregActionPerformed
+
+    private void lbextMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbextMouseClicked
+        this.dispose();
+        new frlog().show();
+    }//GEN-LAST:event_lbextMouseClicked
+
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(frmregA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(frmregA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(frmregA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(frmregA.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new frmregA().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel body;
+    private javax.swing.JButton btnreg;
+    private com.toedter.calendar.JDateChooser datebirth;
+    private javax.swing.JPanel header;
+    private javax.swing.JLabel lbbackground;
+    private javax.swing.JLabel lbchoose;
+    private javax.swing.JLabel lbcompass;
+    private javax.swing.JLabel lbext;
+    private javax.swing.JLabel lbfullnm;
+    private javax.swing.JLabel lbgender;
+    private javax.swing.JLabel lbicontitle;
+    private javax.swing.JLabel lbmail;
+    private javax.swing.JLabel lbpass;
+    private javax.swing.JLabel lbplace;
+    private javax.swing.JLabel lbshnm;
+    private javax.swing.JLabel lbtitle;
+    private javax.swing.JLabel lbusnm;
+    private javax.swing.JRadioButton rbtnman;
+    private javax.swing.JRadioButton rbtnwoman;
+    private javax.swing.JTextField txtcompass;
+    private javax.swing.JTextField txtmail;
+    private javax.swing.JTextField txtnm;
+    private javax.swing.JTextField txtpass;
+    private javax.swing.JTextField txtplc;
+    private javax.swing.JTextField txtshnm;
+    private javax.swing.JTextField txtusnm;
+    // End of variables declaration//GEN-END:variables
+}
